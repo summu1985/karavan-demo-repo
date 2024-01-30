@@ -1,0 +1,19 @@
+- route:
+    id: route-1ba7
+    nodePrefixId: route-e59
+    from:
+      id: from-5d7b
+      uri: timer
+      parameters:
+        timerName: hello
+      steps:
+        - setBody:
+            id: setBody-3bb4
+            expression:
+              constant:
+                id: constant-1c36
+                expression: Hello
+                resultType: java.lang.String
+        - to:
+            id: to-3a0d
+            uri: kamelet:custom-logger-sink
