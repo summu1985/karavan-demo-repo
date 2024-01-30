@@ -96,7 +96,7 @@ spec:
     - camel:log
   template:
     route:
-      id: route-f6bc
+      id: route-3ce6
       from:
         id: from-a432
         uri: kamelet:source
@@ -104,20 +104,7 @@ spec:
           - process:
               id: process-ce97
               ref: CapitalizationProcessor
-          - to:
-              id: to-33b0
-              uri: log
-              parameters:
-                level: '{{?level}}'
-                logMask: '{{?logMask}}'
-                marker: '{{?marker}}'
-                multiline: '{{?multiline}}'
-                showAllProperties: '{{?showAllProperties}}'
-                showBody: '{{?showBody}}'
-                showBodyType: '{{?showBodyType}}'
-                showExchangePattern: '{{?showExchangePattern}}'
-                showHeaders: '{{?showHeaders}}'
-                showProperties: '{{?showProperties}}'
-                showStreams: '{{?showStreams}}'
-                showCachedStreams: '{{?showCachedStreams}}'
-                loggerName: '{{loggerName}}'
+          - log:
+              id: log-1a1e
+              message: ${body}
+              loggingLevel: INFO
