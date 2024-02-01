@@ -96,7 +96,7 @@ spec:
     - camel:log
   template:
     route:
-      id: route-d085
+      id: route-0c19
       from:
         id: from-a432
         uri: kamelet:source
@@ -108,6 +108,12 @@ spec:
                   id: java-b9f4
                   expression: message.getBody(String.class).toUpperCase()
                   resultType: java.lang.String
+          - setBody:
+              id: setBody-b3ba
+              expression:
+                java:
+                  id: java-f146
+                  expression: message.getBody(String.class).toUpperCase()
           - log:
               id: log-1a1e
               message: ${body}
