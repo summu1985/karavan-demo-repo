@@ -2,7 +2,7 @@
     id: route-1ba7
     nodePrefixId: route-e59
     from:
-      id: from-5d7b
+      id: from-0966
       uri: timer
       parameters:
         timerName: hello

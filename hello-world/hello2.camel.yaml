@@ -1,0 +1,27 @@
+- route:
+    id: route-72b8
+    nodePrefixId: route-c6d
+    from:
+      id: from-7e50
+      uri: timer
+      parameters:
+        timerName: foo
+      steps:
+        - setBody:
+            id: setBody-8d4a
+            expression:
+              constant:
+                id: constant-b12f
+                expression: Sumit
+                resultType: java.lang.String
+        - setBody:
+            id: setBody-14c9
+            expression:
+              java:
+                id: java-5425
+                expression: message.getBody(String.class).toUpperCase()
+                resultType: java.lang.String
+        - log:
+            id: log-05c2
+            message: ${body}
+            loggingLevel: INFO
