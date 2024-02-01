@@ -96,18 +96,11 @@ spec:
     - camel:log
   template:
     route:
-      id: route-0c19
+      id: route-bacb
       from:
         id: from-a432
         uri: kamelet:source
         steps:
-          - script:
-              id: script-b938
-              expression:
-                java:
-                  id: java-b9f4
-                  expression: message.getBody(String.class).toUpperCase()
-                  resultType: java.lang.String
           - setBody:
               id: setBody-b3ba
               expression:
