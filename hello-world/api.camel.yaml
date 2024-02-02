@@ -1,0 +1,20 @@
+- rest:
+    id: rest-4fd6
+    post:
+      - id: post-17ae
+        path: /asyncrouting
+        to: direct:async-routing
+        consumes: application/json
+        produces: application/json
+        bindingMode: auto
+- route:
+    id: route-66db
+    from:
+      id: from-9b00
+      uri: direct
+      parameters:
+        name: async-routing
+      steps:
+        - log:
+            id: log-04f0
+            message: ${body}
