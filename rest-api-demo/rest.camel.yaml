@@ -44,18 +44,3 @@
         - to:
             id: to-bffe
             uri: kamelet:custom-logger-sink
-- route:
-    id: route-d3db
-    from:
-      id: from-f503
-      uri: timer
-      parameters:
-        timerName: foo
-        repeatCount: 4
-      steps:
-        - to:
-            id: to-3584
-            uri: kamelet:http-sink
-            parameters:
-              url: http://rest:8080/items
-              method: GET
