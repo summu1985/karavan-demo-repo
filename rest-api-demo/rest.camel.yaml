@@ -8,7 +8,6 @@
         bindingMode: auto
 - route:
     id: route-575a
-    nodePrefixId: route-87c
     from:
       id: from-4226
       uri: direct
@@ -47,7 +46,6 @@
             uri: kamelet:custom-logger-sink
 - route:
     id: route-d3db
-    nodePrefixId: route-1ae
     from:
       id: from-f503
       uri: timer
