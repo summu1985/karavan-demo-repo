@@ -1,0 +1,28 @@
+- rest:
+    id: rest-1a86
+    get:
+      - id: get-e941
+        path: /items
+        to: direct:item-consumer
+        produces: application/json
+        bindingMode: auto
+- route:
+    id: route-a8f8
+    nodePrefixId: route-5ff
+    from:
+      id: from-6db4
+      uri: direct
+      parameters:
+        name: item-consumer
+      steps:
+        - to:
+            id: to-e4e5
+            uri: http
+            parameters:
+              httpUri: >-
+                item-manager-summukhe-dev.apps.sandbox-m4.g2pi.p1.openshiftapps.com/api/
+              bridgeEndpoint: true
+              httpMethod: GET
+        - to:
+            id: to-2dca
+            uri: kamelet:custom-logger-sink
