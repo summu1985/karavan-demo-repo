@@ -96,7 +96,7 @@ spec:
     - camel:log
   template:
     route:
-      id: route-bacb
+      id: route-da8d
       from:
         id: from-a432
         uri: kamelet:source
