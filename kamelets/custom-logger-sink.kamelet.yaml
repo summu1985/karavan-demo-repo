@@ -104,7 +104,7 @@ spec:
           - setBody:
               id: setBody-b3ba
               expression:
-                java:
+                joor:
                   id: java-f146
                   expression: message.getBody(String.class).toUpperCase()
           - log:
