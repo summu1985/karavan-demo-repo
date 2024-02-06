@@ -1,3 +1,4 @@
+#camel-k: dependencies=camel:timer,camel:direct
 - rest:
     id: rest-807c
     get:
