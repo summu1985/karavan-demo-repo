@@ -57,5 +57,5 @@
             id: to-3584
             uri: kamelet:http-sink
             parameters:
-              url: http://rest-api-demo:8080/items
+              url: http://rest:8080/items
               method: GET
